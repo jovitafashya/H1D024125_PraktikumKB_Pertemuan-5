@@ -110,13 +110,11 @@ def level(s):
 
 def hasil_out(h):
     print("\nHasil Diagnosa:")
-
     if not h:
         print("Tidak ditemukan penyakit.")
         return
-
     for i, (p, s) in enumerate(h, 1):
-        print(f"{i}. {p} ({s:.1f}%)")
+        print(f"{i}. {p} ({s:.1f}%) {level(s)}")  
 
 def main():
     while True:
